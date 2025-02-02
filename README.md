@@ -4,13 +4,22 @@
 Project used to serve up configurations and secrets to other projects.  It is a wrapper on top of dynaconf.  
 
 ## Table of Contents
-- [Miscellaneous](#miscellaneous)
+- [Requirements](#requirements)
 - [Usage](#usage)
 - [Features](#features)
+- [Miscellaneous](#miscellaneous)
 - [Contact](#contact)
 
-## Miscellaneous
+## Requirements
+__Set environment variables of parent project__  
 
+ENV_FOR_DYNACONF=\<environment\>  
+_i.e. development, integration, production_  
+
+DYNACONF_SECRET_KEY=\<secret_key\>
+
+This can be done in the environment itself, or using .env file using  
+_from dotenv import load_dotenv_
 
 ## Usage
 __Importing:__  
@@ -28,17 +37,6 @@ python .\encrypt_helper.py --decrypt=True
 _Script will ask for the secret_key required to decrypt_
 
 #
-### Set environment variables of parent project
-
-ENV_FOR_DYNACONF=<'environment'>  
-i.e. development, integration, production
-
-DYNACONF_SECRET_KEY=<'secret_key'>
-
-This can be done in the environment itself, or using .env file using  
-_from dotenv import load_dotenv_
-
-#
 
 ## Features
 - Configurations
@@ -48,6 +46,8 @@ _from dotenv import load_dotenv_
   - encrypt_helper.generate_secret_key()
   - encrypt_helper.encrypt_values()
   - encrypt_helper.decrypt_values()
+
+## Miscellaneous
 
 ## Contact
 Neal Routson  
