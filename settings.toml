@@ -1,17 +1,20 @@
 [default]
 # Default settings for all environments
-DATABASE_URL = "default-database-url"
-API_KEY = "default-api-key"
+DATABASE_NAME = ""
+DATABASE_HOST = ""
+DATABASE_PORT = ""
 LOG_LEVEL = "info"
 
 [development]
 # Settings for the development environment
-DATABASE_URL = "postgres://dev_user:dev_pass@localhost:5432/dev_db"
-API_KEY = "dev-api-key"
+DATABASE_NAME = "us_dev_daas"
+DATABASE_HOST = "localhost"
+DATABASE_PORT = "5432"
 LOG_LEVEL = "debug"
 
 [production]
 # Settings for the production environment
-DATABASE_URL = "postgres://prod_user:prod_pass@localhost:5432/prod_db"
-API_KEY = "prod-api-key"
-LOG_LEVEL = "warning"
+DATABASE_NAME = "us_prd_daas"
+DATABASE_HOST = "localhost"
+DATABASE_PORT = "5432"
+LOG_LEVEL = "info"

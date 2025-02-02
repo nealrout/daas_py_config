@@ -2,6 +2,16 @@ import argparse
 import toml
 from cryptography.fernet import Fernet
 import getpass
+import os
+import sys
+
+# Get the current working directory (CWD) of the script
+cwd = os.getcwd()
+# Build the relative path to the sibling project
+project_path = os.path.abspath(os.path.join(cwd, '..'))
+# Add the project path to sys.path
+sys.path.insert(0, project_path)
+
 from daas_py_common.logging_config import logger
 
 def generate_secret_key():
