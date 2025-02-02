@@ -1,21 +1,54 @@
-# config
+# daas_py_config  
 
-# create new venv
-python -m venv .venv
+## Description
+Project used to serve up configurations and secrets to other projects.  It is a wrapper on top of dynaconf.  
 
-# To activate the virtual environment for this project
-.\.venv\Scripts\activate
+## Table of Contents
+- [Miscellaneous](#miscellaneous)
+- [Usage](#usage)
+- [Features](#features)
+- [Contact](#contact)
 
-# To install all modules in requirements.txt
-pip install -r requirements.txt
+## Miscellaneous
 
-# To create new config project
-dynaconf init -f toml
 
-# To generate secrety key
-see encrypt_helper.py
-    generate_secret_key()
+## Usage
+__Importing:__  
+from daas_py_config import config
 
-# To encrypt secrets
-see encrypt_helper.py
-    encrypt_values()
+__Generate a new secret key:__  
+python .\encrypt_helper.py --secret=True
+
+__Encrypt .secrets.toml:__  
+python .\encrypt_helper.py --encrypt=True  
+_Script will ask for the secret_key required to decrypt_
+
+__Decrypt .secrets.toml:__  
+python .\encrypt_helper.py --decrypt=True  
+_Script will ask for the secret_key required to decrypt_
+
+#
+### Set environment variables of parent project
+
+ENV_FOR_DYNACONF=<'environment'>  
+i.e. development, integration, production
+
+DYNACONF_SECRET_KEY=<'secret_key'>
+
+This can be done in the environment itself, or using .env file using  
+_from dotenv import load_dotenv_
+
+#
+
+## Features
+- Configurations
+  - config.get_configs()
+  - config.get_secret(configuration_key, secret_key=None)
+- Encrypted secrets
+  - encrypt_helper.generate_secret_key()
+  - encrypt_helper.encrypt_values()
+  - encrypt_helper.decrypt_values()
+
+## Contact
+Neal Routson  
+nroutson@gmail.com
