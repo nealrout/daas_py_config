@@ -22,7 +22,7 @@ settings = Dynaconf(
 def get_configs():
     # for key, value in settings.items():
     #     logger.debug(f"{key}: {value}")
-    logger.debug (settings.as_dict())
+    # logger.debug (settings.as_dict())
     return settings
 
 def get_secret(configuration_key, secret_key=None):
