@@ -1,13 +1,15 @@
-from main import get_secret, get_configs
+# daas_py_config/__init__.py
+from daas_py_config import config
+from daas_py_common.logging_config import logger
 
 # Package-level variable
-PACKAGE_NAME = "daas_config"
+PACKAGE_NAME = "daas_py_config"
 
 # Package-level initialization
-print(f"Initializing package {PACKAGE_NAME}")
+logger.debug(f"Initializing package {PACKAGE_NAME}")
 
 # Package-level function
 def initialize():
-    print("Package initialized")
+    logger.debug("Package initialized")
 
 __all__ = ["initialize", "PACKAGE_NAME"]

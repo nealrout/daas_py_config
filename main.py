@@ -2,6 +2,7 @@ import os
 from config import settings
 from dynaconf import Dynaconf
 from cryptography.fernet import Fernet
+from daas_py_common.logging_config import logger
 
 def get_configs():
     return settings

@@ -1,5 +1,8 @@
 # config
 
+# create new venv
+python -m venv .venv
+
 # To activate the virtual environment for this project
 .\.venv\Scripts\activate
 
