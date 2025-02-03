@@ -12,6 +12,13 @@ DATABASE_HOST = "localhost"
 DATABASE_PORT = "5432"
 LOG_LEVEL = "debug"
 
+[integration]
+# Settings for the development environment
+DATABASE_NAME = "us_int_daas"
+DATABASE_HOST = "localhost"
+DATABASE_PORT = "5432"
+LOG_LEVEL = "debug"
+
 [production]
 # Settings for the production environment
 DATABASE_NAME = "us_prd_daas"
