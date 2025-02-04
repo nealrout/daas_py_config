@@ -1,27 +1,39 @@
 [default]
 # Default settings for all environments
+LOG_LEVEL = "info"
 DATABASE_NAME = ""
 DATABASE_HOST = ""
 DATABASE_PORT = ""
-LOG_LEVEL = "info"
+SOLR_URL = ""
+SOLR_COLLECTION_FACILITy = ""
+SOLR_COLLECTION_ASSET = ""
 
 [development]
 # Settings for the development environment
+LOG_LEVEL = "debug"
 DATABASE_NAME = "us_dev_daas"
 DATABASE_HOST = "localhost"
 DATABASE_PORT = "5432"
-LOG_LEVEL = "debug"
+SOLR_URL = "http://localhost:8983/solr"
+SOLR_COLLECTION_FACILITy = "facility"
+SOLR_COLLECTION_ASSET = "asset"
 
 [integration]
 # Settings for the development environment
+LOG_LEVEL = "debug"
 DATABASE_NAME = "us_int_daas"
 DATABASE_HOST = "localhost"
 DATABASE_PORT = "5432"
-LOG_LEVEL = "debug"
+SOLR_URL = "http://localhost:8983/solr"
+SOLR_COLLECTION_FACILITy = "facility"
+SOLR_COLLECTION_ASSET = "asset"
 
 [production]
 # Settings for the production environment
+LOG_LEVEL = "info"
 DATABASE_NAME = "us_prd_daas"
 DATABASE_HOST = "localhost"
 DATABASE_PORT = "5432"
-LOG_LEVEL = "info"
+SOLR_URL = "http://localhost:8983/solr"
+SOLR_COLLECTION_FACILITy = "facility"
+SOLR_COLLECTION_ASSET = "asset"
