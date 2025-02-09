@@ -13,7 +13,7 @@ def parse_requirements(filename):
 setup(
     name="daas_py_config",
     version="0.1.0",
-    packages=find_packages(),
+    packages=find_packages(include=["daas_py_config", "daas_py_config.*"]),
     include_package_data=True, 
     author="Neal Routson",
     author_email="nroutson@gmail.com",

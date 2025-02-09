@@ -45,8 +45,8 @@ IDX_FETCH_KEY_ASSET = "asset_id"
 [integration]
 # Settings for the development environment
 LOG_LEVEL = "debug"
-DATABASE_NAME = "us_int_daas"
-DATABASE_HOST = "localhost"
+DATABASE_NAME = "us_dev_daas"
+DATABASE_HOST = "host.docker.internal"
 DATABASE_PORT = "5432"
 DATABASE_SCHEMA = "daas"
 SOLR_URL = "http://localhost:8983/solr"

@@ -1,4 +1,7 @@
+daas_py_common
 setuptools
+build
 dynaconf
 cryptography
 toml
+wheel
