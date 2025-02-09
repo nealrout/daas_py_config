@@ -21,7 +21,6 @@ if __name__ == "__main__":
     logger.debug("")
     logger.debug("")
     logger.debug("")
-    # asdf = config.get_secret('DATABASE_USER', 'K6iLs5AVjnSGUwNVANmkwvj6iPiKe0hcFltnHDrNNYg=')
     # logger.debug(asdf)
     logger.debug(config.neal("asdf"))
 
