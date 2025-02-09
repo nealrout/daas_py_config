@@ -8,6 +8,7 @@ Project used to serve up configurations and secrets to other projects.  It is a 
 
 ## Table of Contents
 - [Requirements](#requirements)
+- [Install-Uninstall](#install-uninstall)
 - [Usage](#usage)
 - [Features](#features)
 - [Miscellaneous](#miscellaneous)
@@ -24,6 +25,16 @@ DYNACONF_SECRET_KEY=\<secret_key\>
 This can be done in the environment itself, or using .env file using  
 _from dotenv import load_dotenv_
 
+## Install-Uninstall
+__Install:__  
+python -m pip install daas_py_config
+
+__Uninstall:__  
+python -m pip uninstall daas_py_config
+
+__Rebuild from source:__  
+python -m pip install --no-binary :all: .
+
 ## Usage
 __Importing:__  
 from daas_py_config import config
@@ -39,7 +50,8 @@ __Decrypt .secrets.toml:__
 python .\encrypt_helper.py --decrypt=True  
 _Script will ask for the secret_key required to decrypt_
 
-#
+## Package
+python -m build daas_py_config"
 
 ## Features
 - Configurations
