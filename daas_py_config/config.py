@@ -1,7 +1,6 @@
 import os
 from dynaconf import Dynaconf
 from cryptography.fernet import Fernet
-from daas_py_common.logging_config import logger
 
 # Get the absolute path to the daas_py_config directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -21,8 +20,8 @@ settings = Dynaconf(
 
 def get_configs():
     # for key, value in settings.items():
-    #     logger.debug(f"{key}: {value}")
-    # logger.debug (settings.as_dict())
+    #     print(f"{key}: {value}")
+    # print(settings.as_dict())
     return settings
 
 def get_secret(configuration_key, secret_key=None):
