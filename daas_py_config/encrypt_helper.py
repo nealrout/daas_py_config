@@ -12,7 +12,6 @@ project_path = os.path.abspath(os.path.join(cwd, '..'))
 # Add the project path to sys.path
 sys.path.insert(0, project_path)
 
-from daas_py_common.logging_config import logger
 
 def generate_secret_key():
     # Generate a new secret key
@@ -42,7 +41,7 @@ def encrypt_values(file_path, secret_key):
     with open(file_path, 'w') as file:
         toml.dump(encrypted_secrets, file)
 
-    logger.info("All values in .secrets.toml have been encrypted.")
+    print("All values in .secrets.toml have been encrypted.")
 
 def decrypt_values(file_path, secret_key):
     # Load the encrypted .secrets.toml file
@@ -67,7 +66,7 @@ def decrypt_values(file_path, secret_key):
     with open(file_path, 'w') as file:
         toml.dump(decrypted_secrets, file)
 
-    logger.info("All values in .secrets.toml have been decrypted.")
+    print("All values in .secrets.toml have been decrypted.")
 
 
 def main():
@@ -88,7 +87,7 @@ def main():
             encrypt_values(args.file_path, secret_key.encode())
     if args.secret:
         secret_key = generate_secret_key()
-        logger.info(f"Generated secret key: {secret_key}")
+        print(f"Generated secret key: {secret_key}")
 
 if __name__ == "__main__":
     main()
