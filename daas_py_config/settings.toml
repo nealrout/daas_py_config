@@ -55,6 +55,7 @@ DB_CHANNEL_ACCOUNT = "account_channel"
 DB_CHANNEL_FACILITY = "facility_channel"
 DB_CHANNEL_ASSET = "asset_channel"
 DB_CHANNEL_SERVICE = "service_channel"
+DB_CHANNEL_PARENT_FACILITY = "account_channel"
 
 
 [development]
