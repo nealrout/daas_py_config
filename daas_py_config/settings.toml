@@ -101,10 +101,10 @@ IDX_BUFFER_DURATION_ASSET = "10"
 # Settings for the production environment
 LOG_LEVEL = "info"
 DATABASE_NAME = "us_prd_daas"
-DATABASE_HOST = "localhost"
+DATABASE_HOST = "host.docker.internal"
 DATABASE_PORT = "5432"
 DATABASE_SCHEMA = "daas"
-SOLR_URL = "http://localhost:8983/solr"
+SOLR_URL = "http://host.docker.internal:8983/solr"
 SOLR_TIMEOUT = "10"
 SOLR_MAX_ROW = 1000
 PAGINATION_SIZE_DB = "10"
