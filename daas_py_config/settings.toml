@@ -41,6 +41,7 @@ IDX_FETCH_KEY_USERFACILITY = "username"
 
 # DATABASE CONFIGURATIONS
 DB_FUNC_LOG = "daas_log"
+DB_FUNC_GET_USERFACILITY_BY_USER = "get_user_facility_by_user"
 DB_FUNC_GET_EVENT_NOTIFICATION_BUFFER = "get_event_notification_buffer"
 DB_FUNC_CLEAN_EVENT_NOTIFICATION_BUFFER = "clean_event_notification_buffer"
 DB_FUNC_GET_INDEX_OVERRIDE = "get_index_override"
